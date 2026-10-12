@@ -1,0 +1,178 @@
+/* Shared page-level UI polish */
+
+.page-ui-section,
+.audit-page,
+.report-page,
+.settings-page,
+.tracking-page,
+.dashboard-page {
+    isolation: isolate;
+}
+
+.audit-header,
+.audit-filter,
+.report-toolbar,
+.report-header,
+.settings-card,
+.tracking-summary-box,
+.timeline-card,
+.current-location-card {
+    overflow: hidden;
+}
+
+.audit-header,
+.report-header,
+.settings-header {
+    position: relative;
+}
+
+.audit-header::before,
+.report-header::before,
+.settings-header::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: #2c5dab;
+}
+
+.audit-title,
+.report-title,
+.settings-title {
+    letter-spacing: -0.02em;
+}
+
+.audit-filter,
+.report-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.audit-filter .form-control,
+.audit-filter .form-select,
+.report-toolbar .form-control,
+.report-toolbar .form-select {
+    min-width: 150px;
+}
+
+.audit-count,
+.report-stat-label,
+.summary-label,
+.info-label {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.audit-table tbody tr,
+.report-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.audit-table tbody tr:hover,
+.report-table tbody tr:hover {
+    background-color: rgba(44, 93, 171, 0.06);
+}
+
+.audit-empty,
+.report-empty {
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.tracking-summary-box {
+    min-height: 92px;
+}
+
+.tracking-summary-box:hover,
+.timeline-card:hover,
+.settings-note:hover,
+.report-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+}
+
+.timeline-card,
+.tracking-summary-box,
+.settings-note,
+.report-stat {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.route-movement {
+    border: 1px solid #e5eaf2;
+}
+
+.remarks-box {
+    line-height: 1.55;
+}
+
+.document-actions {
+    flex-wrap: wrap;
+}
+
+.document-actions .action-button {
+    min-width: 36px;
+}
+
+.login-card {
+    border: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.login-input:focus {
+    transform: translateY(-1px);
+}
+
+.login-button,
+.login-switch-button {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-button:hover,
+.login-switch-button:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767.98px) {
+    .audit-filter,
+    .report-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .audit-filter > *,
+    .report-toolbar > * {
+        width: 100%;
+    }
+
+    .tracking-summary-box {
+        align-items: flex-start;
+    }
+
+    .timeline-card {
+        padding: 1rem;
+    }
+
+    .route-movement {
+        gap: 0.65rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

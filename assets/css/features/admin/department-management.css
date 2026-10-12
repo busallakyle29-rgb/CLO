@@ -1,0 +1,121 @@
+/* =========================================================
+   DEPARTMENT MANAGEMENT STYLES
+========================================================= */
+
+.stat-icon {
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#departmentSearch {
+    border-color: #dee2e6;
+}
+
+#departmentSearch::placeholder {
+    color: #999;
+}
+
+#departmentsTable {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.table .btn-group-sm .btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+html[data-theme="dark"] .table th {
+    background-color: #1f2937 !important;
+    border-color: #3b4759 !important;
+    color: #e5e7eb !important;
+}
+
+html[data-theme="dark"] .table td,
+html[data-theme="dark"] .table tbody tr,
+html[data-theme="dark"] .table tbody tr:hover,
+html[data-theme="dark"] .table-responsive,
+html[data-theme="dark"] .table-responsive > .table {
+    background-color: #111827 !important;
+    border-color: #3b4759 !important;
+    color: #e5e7eb !important;
+}
+
+html[data-theme="dark"] .table tbody tr:hover {
+    background-color: #1f2937 !important;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] p,
+html[data-theme="dark"] .text-muted,
+html[data-theme="dark"] .small,
+html[data-theme="dark"] .badge,
+html[data-theme="dark"] .status-pill,
+html[data-theme="dark"] .department-table-row td {
+    color: #e5e7eb !important;
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .card-body,
+html[data-theme="dark"] .card-header,
+html[data-theme="dark"] .card-footer {
+    background-color: #1f2937 !important;
+    border-color: #3b4759 !important;
+    color: #e5e7eb !important;
+}
+
+@media (max-width: 768px) {
+    .stat-icon {
+        min-width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-icon {
+        min-width: 45px;
+        height: 45px;
+    }
+
+    .stat-icon .bi {
+        font-size: 1rem;
+    }
+
+    .h4 {
+        font-size: 1.1rem;
+    }
+
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

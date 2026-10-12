@@ -1,0 +1,582 @@
+/* =========================================================
+   CLO-PANABO DASHBOARD
+   assets/css/features/dashboard/dashboard.css
+   ========================================================= */
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.dashboard-page {
+    padding-bottom: 2rem;
+}
+
+/* =========================================================
+   DASHBOARD HEADER
+   ========================================================= */
+
+.dash-header {
+    background: #ffffff;
+    border: 1px solid #e7edf5;
+    border-radius: 14px;
+    padding: 1.1rem 1.25rem;
+    box-shadow: 0 2px 10px rgba(30, 60, 100, 0.04);
+}
+
+.dash-header h1 {
+    color: #172f5f;
+    font-weight: 700;
+}
+
+.dash-sub {
+    color: #6b7a90;
+    font-size: 0.88rem;
+}
+
+.dash-divider {
+    margin: 0 0.4rem;
+    color: #a0aec0;
+}
+
+/* =========================================================
+   KPI CARDS
+   ========================================================= */
+
+.kpi-card {
+    background: #ffffff;
+    border: 1px solid #e5ebf3;
+    border-radius: 14px;
+    padding: 1.15rem;
+    color: inherit;
+    min-height: 158px;
+    box-shadow: 0 2px 10px rgba(30, 60, 100, 0.035);
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(30, 60, 100, 0.09);
+    border-color: #cbd8eb;
+    color: inherit;
+}
+
+.kpi-title {
+    color: #68778e;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.kpi-value {
+    color: #172f5f;
+    font-size: 2rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+}
+
+.kpi-meta {
+    font-size: 0.76rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.kpi-meta-success {
+    color: #198754;
+}
+
+.kpi-meta-warning {
+    color: #c47a00;
+}
+
+.kpi-meta-danger {
+    color: #dc3545;
+}
+
+.kpi-meta-info {
+    color: #0d6efd;
+}
+
+.kpi-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.kpi-icon-blue {
+    background: #2e5cab;
+}
+
+.kpi-icon-orange {
+    background: #f59e0b;
+}
+
+.kpi-icon-green {
+    background: #10b981;
+}
+
+.kpi-icon-red {
+    background: #ef4444;
+}
+
+.kpi-icon-purple {
+    background: #7c3aed;
+}
+
+.kpi-icon-cyan {
+    background: #06b6d4;
+}
+
+/* =========================================================
+   PANEL CARDS
+   ========================================================= */
+
+.panel-card {
+    background: #ffffff;
+    border: 1px solid #e5ebf3;
+    border-radius: 14px;
+    padding: 1.15rem;
+    box-shadow: 0 2px 10px rgba(30, 60, 100, 0.035);
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.panel-title {
+    color: #172f5f;
+    font-size: 0.98rem;
+    font-weight: 700;
+}
+
+.panel-sub {
+    color: #8190a5;
+    font-size: 0.78rem;
+}
+
+/* =========================================================
+   CHARTS
+   ========================================================= */
+
+.chart-container {
+    position: relative;
+    width: 100%;
+}
+
+.chart-volume {
+    height: 300px;
+    margin-top: 0.75rem;
+}
+
+.chart-type {
+    height: 220px;
+    margin-top: 0.5rem;
+}
+
+.chart-weekly {
+    height: 220px;
+    margin-top: 0.75rem;
+}
+
+.chart-container canvas {
+    max-width: 100%;
+}
+
+/* =========================================================
+   DOCUMENT TYPE LIST
+   ========================================================= */
+
+.type-list {
+    margin-top: 0.4rem;
+}
+
+.type-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.48rem 0;
+    border-bottom: 1px solid #edf1f6;
+    color: #53637a;
+    font-size: 0.8rem;
+}
+
+.type-row:last-child {
+    border-bottom: 0;
+}
+
+.type-row strong {
+    color: #172f5f;
+}
+
+/* =========================================================
+   CONFIDENTIALITY
+   ========================================================= */
+
+.confidentiality-list {
+    margin-top: 0.8rem;
+}
+
+.confidentiality-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #edf1f6;
+    color: #52627a;
+    font-size: 0.84rem;
+}
+
+.confidentiality-row:last-child {
+    border-bottom: 0;
+}
+
+.confidentiality-row strong {
+    color: #172f5f;
+}
+
+.classification-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #94a3b8;
+    display: inline-block;
+}
+
+.classification-normal {
+    background: #198754;
+}
+
+.classification-confidential {
+    background: #f59e0b;
+}
+
+.classification-highly-confidential {
+    background: #dc3545;
+}
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-top: 0.9rem;
+}
+
+.quick-item {
+    min-height: 76px;
+    padding: 0.7rem;
+    border: 1px solid #e5ebf3;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    text-align: center;
+    text-decoration: none;
+    color: #53637a;
+    font-size: 0.76rem;
+    font-weight: 600;
+    background: #ffffff;
+    transition:
+        border-color 0.15s ease,
+        background 0.15s ease,
+        transform 0.15s ease;
+}
+
+.quick-item:hover {
+    color: #172f5f;
+    border-color: #cbd8eb;
+    background: #f8fbff;
+    transform: translateY(-1px);
+}
+
+.q-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.q-icon-blue {
+    background: #2e5cab;
+}
+
+.q-icon-light-blue {
+    background: #3b82f6;
+}
+
+.q-icon-indigo {
+    background: #6366f1;
+}
+
+.q-icon-orange {
+    background: #f59e0b;
+}
+
+.q-icon-green {
+    background: #10b981;
+}
+
+.q-icon-yellow {
+    background: #f4b400;
+}
+
+.q-icon-gray {
+    background: #64748b;
+}
+
+/* =========================================================
+   RECENT ACTIVITY
+   ========================================================= */
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.activity-item:last-child {
+    border-bottom: 0;
+}
+
+.activity-dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+}
+
+.activity-content {
+    min-width: 0;
+    flex: 1;
+}
+
+.activity-content .small {
+    line-height: 1.45;
+    color: #596a82;
+}
+
+.activity-content strong {
+    color: #263b5d;
+}
+
+.activity-time {
+    margin-top: 0.15rem;
+    color: #8a97a9;
+    font-size: 0.72rem;
+}
+
+/* =========================================================
+   RECENT DOCUMENTS
+   ========================================================= */
+
+.recent-table {
+    background: #ffffff;
+    border: 1px solid #e5ebf3;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(30, 60, 100, 0.035);
+}
+
+.recent-table .table {
+    margin-bottom: 0;
+}
+
+.recent-table thead th {
+    background: #f8fafc;
+    border-bottom: 1px solid #e5ebf3;
+    color: #68778e;
+    font-size: 0.73rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    white-space: nowrap;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.recent-table tbody td {
+    color: #53637a;
+    font-size: 0.8rem;
+    border-color: #edf1f6;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.tracking-number {
+    color: #1f5ca8;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.document-title-cell {
+    max-width: 340px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #344967;
+    font-weight: 500;
+}
+
+/* =========================================================
+   EMPTY STATES
+   ========================================================= */
+
+.empty-mini {
+    color: #8a97a9;
+    font-size: 0.78rem;
+    padding: 0.9rem 0;
+    text-align: center;
+}
+
+/* =========================================================
+   BOOTSTRAP BADGE TUNING
+   ========================================================= */
+
+.recent-table .badge {
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 0.38rem 0.55rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .dashboard-page .col-xl-3 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+
+    .chart-volume {
+        height: 270px;
+    }
+
+    .panel-card {
+        padding: 1rem;
+    }
+
+}
+
+@media (max-width: 767.98px) {
+
+    .dash-header {
+        padding: 1rem;
+    }
+
+    .kpi-value {
+        font-size: 1.75rem;
+    }
+
+    .chart-volume {
+        height: 250px;
+    }
+
+    .chart-type,
+    .chart-weekly {
+        height: 210px;
+    }
+
+    .quick-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .document-title-cell {
+        max-width: 220px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    .dashboard-page {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    .dash-header {
+        border-radius: 11px;
+    }
+
+    .kpi-card {
+        padding: 1rem;
+    }
+
+    .kpi-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .quick-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .quick-item {
+        min-height: 70px;
+    }
+
+    .chart-volume {
+        height: 220px;
+    }
+
+    .chart-type,
+    .chart-weekly {
+        height: 190px;
+    }
+
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .kpi-card,
+    .quick-item {
+        transition: none;
+    }
+
+}

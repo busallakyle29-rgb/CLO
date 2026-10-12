@@ -1,0 +1,60 @@
+/* User Profile Page Styles */
+
+.page-header {
+    border-top: 4px solid #2e5cab;
+}
+
+.card {
+    border-radius: 0.5rem;
+}
+
+.card-header {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+}
+
+.profile-picture-preview,
+.profile-picture-placeholder {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+
+.profile-picture-preview {
+    object-fit: cover;
+    border: 4px solid #e8eef8;
+}
+
+.profile-picture-placeholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef3fb;
+    color: #2e5cab;
+    font-size: 3.5rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #2e5cab;
+    box-shadow: 0 0 0 0.2rem rgba(46, 92, 171, 0.25);
+}
+
+.btn-primary {
+    background-color: #2e5cab;
+    border-color: #2e5cab;
+}
+
+.btn-primary:hover {
+    background-color: #234580;
+    border-color: #234580;
+}

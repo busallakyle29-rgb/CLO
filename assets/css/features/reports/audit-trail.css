@@ -1,0 +1,137 @@
+.audit-page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.audit-filter {
+    border: 1px solid #d6e0f3;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 16px;
+}
+
+.audit-table-card {
+    border: 1px solid #d6e0f3;
+    border-radius: 12px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.audit-table {
+    margin-bottom: 0;
+}
+
+.audit-table thead th {
+    background: #f5f8fd;
+    color: #61779f;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    border-bottom: 1px solid #d6e0f3;
+}
+
+.audit-table tbody td {
+    font-size: 0.86rem;
+    vertical-align: middle;
+}
+
+.audit-action {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.audit-document {
+    color: #2458a5;
+    font-weight: 600;
+}
+
+.audit-user {
+    font-weight: 600;
+    color: #334d78;
+}
+
+.audit-time {
+    white-space: nowrap;
+    color: #60759b;
+}
+
+.audit-empty {
+    padding: 50px 20px;
+    text-align: center;
+    color: #7a8fb2;
+}
+
+.audit-count {
+    color: #6c81a5;
+    font-size: 0.85rem;
+}
+
+.audit-details {
+    font-size: 0.8rem;
+}
+
+.audit-details pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 300px;
+    overflow: auto;
+    background: #f6f8fc;
+    border: 1px solid #e1e7f1;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.75rem;
+}
+
+.audit-filter .form-label {
+    color: #405b88;
+    font-size: 0.84rem;
+}
+
+.audit-filter .form-control,
+.audit-filter .form-select {
+    border-color: #cfdaf0;
+}
+
+.audit-filter .form-control:focus,
+.audit-filter .form-select:focus {
+    border-color: #5b8fd9;
+    box-shadow: 0 0 0 0.2rem rgba(47, 110, 200, 0.12);
+}
+
+@media print {
+    .app-sidebar,
+    .mobile-topbar,
+    .audit-filter,
+    .no-print,
+    .sidebar-user {
+        display: none !important;
+    }
+
+    .app-main {
+        padding: 0 !important;
+    }
+
+    .audit-page {
+        max-width: none;
+    }
+
+    .page-header,
+    .audit-table-card {
+        border: 0;
+    }
+
+    body {
+        background: #ffffff !important;
+    }
+
+    .audit-table {
+        font-size: 11px;
+    }
+
+    .audit-table thead th {
+        background: #ffffff !important;
+    }
+}
