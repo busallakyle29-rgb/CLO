@@ -1,0 +1,17 @@
+RewriteEngine On
+
+RewriteRule ^$ pages/route.php?page=index [END,QSA]
+RewriteRule ^(admin|all_documents|archive_documents|audit_trail|dashboard|dashboard_confidentiality|department_management|document_management|document_routing|document_tracking|document_type_management|forgot_password|import_documents|index|login|output_tracking_slip_form|pending_access_requests|pending_documents|register_admin|reports|reset_password|role_management|system_settings|user_profile)\.php$ pages/route.php?page=$1 [END,QSA]
+
+RewriteRule ^attachment\.php$ pages/document_management/routes/attachment.php [END]
+RewriteRule ^request_document_access\.php$ pages/document_management/routes/request_document_access.php [END]
+RewriteRule ^device_login_decision\.php$ pages/login/routes/device_login_decision.php [END]
+RewriteRule ^device_login_request\.php$ pages/login/routes/device_login_request.php [END]
+RewriteRule ^device_login_notifications\.php$ pages/dashboard/routes/device_login_notifications.php [END]
+RewriteRule ^logout\.php$ pages/login/routes/logout.php [END]
+RewriteRule ^notification_clear\.php$ pages/dashboard/routes/notification_clear.php [END]
+RewriteRule ^notification_read\.php$ pages/dashboard/routes/notification_read.php [END]
+RewriteRule ^tracking_slip_print_complete\.php$ pages/output_tracking_slip_form/routes/tracking_slip_print_complete.php [END]
+
+RewriteRule ^functions\.php$ functions/legacy_helpers.php [END]
+RewriteRule ^backup_cli\.php$ cli/backup_cli.php [END]
