@@ -16,7 +16,6 @@ $allowedPages = [
     'document_type_management',
     'forgot_password',
     'import_documents',
-    'index',
     'login',
     'output_tracking_slip_form',
     'pending_access_requests',
