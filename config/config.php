@@ -251,7 +251,7 @@ function get_app_config(): array
         $baseUrl =
             'http://' .
             $host .
-            '/CLO_OLD';
+            '/CLO';
     }
 
     /*
