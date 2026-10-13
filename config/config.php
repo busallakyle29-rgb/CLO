@@ -242,13 +242,6 @@ function get_app_config(): array
             '/'
         );
 
-        $scheme = (
-            !empty($_SERVER['HTTPS'])
-            && strtolower((string) $_SERVER['HTTPS']) !== 'off'
-        )
-            ? 'https://'
-            : 'http://';
-
         /*
         |--------------------------------------------------------------------------
         | Build Application URL
@@ -256,9 +249,9 @@ function get_app_config(): array
         */
 
         $baseUrl =
-            $scheme .
+            'http://' .
             $host .
-            '/CLO';
+            '/CLO_OLD';
     }
 
     /*

@@ -39,8 +39,19 @@ window.openFileHistoryModal = function (modalId) {
             </div>
             <div class="modal-body">
               <div class="alert alert-warning mb-0 p-3">
-                <i class="bi bi-exclamation-triangle"></i>
-                File history could not be loaded. Refresh the page and try again.
+                <i class="bi bi-shield-lock"></i>
+                You do not currently have access to this document's files.
+                Submit an access request to view the File History.
+                <div class="mt-3">
+                  <form method="POST" action="${button.dataset.accessRequestUrl || ''}">
+                    <input type="hidden" name="csrf_token" value="${button.dataset.accessRequestToken || ''}">
+                    <input type="hidden" name="document_id" value="${button.dataset.documentId || ''}">
+                    <button type="submit" class="btn btn-outline-warning">
+                      <i class="bi bi-shield-lock"></i>
+                      Request Access
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
             <div class="modal-footer">

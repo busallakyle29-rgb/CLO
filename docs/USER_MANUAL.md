@@ -106,7 +106,7 @@ The recipient receives a notification. The route initially appears as pending. R
 3. Open **Access Requests** from the sidebar or dashboard to check its status.
 4. The current assignee reviews the request. Approval grants file access; routing alone does not.
 
-You may cancel your own pending request. The current assignee can approve, reject, or revoke access for the document. Administrators can review requests system-wide and cancel them, but approval, rejection, and revocation are currently restricted to the current assignee.
+You may cancel your own pending request. Only the current assignee or an administrator can approve, reject, or revoke access.
 
 ## 7. Receiving a Routed Document
 
