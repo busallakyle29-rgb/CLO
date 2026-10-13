@@ -442,6 +442,10 @@ function auth_can_access_page(string $page): bool
         return $currentRole === 'ADMIN';
     }
 
+    if ($pageName === 'audit_trail.php') {
+        return $currentRole !== '';
+    }
+
     $allowedPages = auth_get_allowed_pages_for_role($currentRole);
 
     if ($allowedPages === []) {

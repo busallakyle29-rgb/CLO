@@ -118,9 +118,17 @@ require dirname(__DIR__, 2) . '/includes/header.php';
                 </div>
             </div>
 
-            <span class="badge bg-primary text-white" style="font-size: 1rem; padding: 0.5rem 1rem;">
-                <?php echo e((string) count($documents)); ?> Records
-            </span>
+            <div class="d-flex align-items-center gap-2">
+                <a
+                    href="<?php echo e(app_url($statusFilter === 'APPROVED' ? 'all_documents.php' : 'all_documents.php?status=APPROVED')); ?>"
+                    class="btn <?php echo $statusFilter === 'APPROVED' ? 'btn-outline-primary' : 'btn-primary'; ?>"
+                >
+                    <?php echo $statusFilter === 'APPROVED' ? 'Show All Documents' : 'Show Approved Documents'; ?>
+                </a>
+                <span class="badge bg-primary text-white" style="font-size: 1rem; padding: 0.5rem 1rem;">
+                    <?php echo e((string) count($documents)); ?> Records
+                </span>
+            </div>
         </div>
     </div>
 
