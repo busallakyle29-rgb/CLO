@@ -4079,6 +4079,8 @@ require_once dirname(__DIR__, 2) . '/includes/header.php';
                                             <i class="bi bi-pencil"></i>
 
                                         </button>
+                                    <?php endif; ?>
+
                                     <?php if (!$canEditDocument && $canEditConfidentiality): ?>
                                         <button
                                             type="button"
@@ -4484,6 +4486,7 @@ require_once dirname(__DIR__, 2) . '/includes/header.php';
                             </div>
                         </template>
 
+                        <?php if ($canEditDocument): ?>
                         <?php require dirname(__DIR__, 2) . '/views/document-management-edit-modal.php'; ?>
                         <?php elseif ($canEditConfidentiality): ?>
                         <div
