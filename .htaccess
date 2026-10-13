@@ -1,7 +1,10 @@
+Options -Indexes
+DirectoryIndex index.php
+
 RewriteEngine On
 
-RewriteRule ^$ pages/route.php?page=index [END,QSA]
-RewriteRule ^(admin|all_documents|archive_documents|audit_trail|dashboard|dashboard_confidentiality|department_management|document_management|document_routing|document_tracking|document_type_management|forgot_password|import_documents|index|login|output_tracking_slip_form|pending_access_requests|pending_documents|register_admin|reports|reset_password|role_management|system_settings|user_profile)\.php$ pages/route.php?page=$1 [END,QSA]
+RewriteRule ^$ index.php [END,QSA]
+RewriteRule ^(admin|all_documents|archive_documents|audit_trail|dashboard|dashboard_confidentiality|department_management|document_management|document_routing|document_tracking|document_type_management|forgot_password|import_documents|login|output_tracking_slip_form|pending_access_requests|pending_documents|register_admin|reports|reset_password|role_management|system_settings|user_profile)\.php$ pages/route.php?page=$1 [END,QSA]
 
 RewriteRule ^attachment\.php$ pages/document_management/routes/attachment.php [END]
 RewriteRule ^request_document_access\.php$ pages/document_management/routes/request_document_access.php [END]
